@@ -49,6 +49,22 @@ public class Car {
         System.out.println("Beep Beep");
     }
 
+    public void setMark(String mark) {
+        Mark = mark;
+    }
+
+    public void setYear(int year) {
+        Year = year;
+    }
+
+    public void setColor(String color) {
+        Color = color;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        MaxSpeed = maxSpeed;
+    }
+
     public void info() {
         System.out.println(getMark() + " " + getYear() + " " + getColor() + " " + getMaxSpeed()+" ");
     }

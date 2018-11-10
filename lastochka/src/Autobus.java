@@ -14,7 +14,7 @@ public class Autobus extends Car_Driver {
         log.info("Конструктор Autobus");
     }
 
-    public void LoadPeople(int pep){
+    public final void LoadPeople(int pep){
         if(people==people_max) {
             System.out.println("Количество людей максимально!");
             return;
@@ -27,11 +27,11 @@ public class Autobus extends Car_Driver {
         return;
     }
 
-    public void UnloadPeaple(int pep){
+    public final void UnloadPeaple(int pep){
         people-=pep;
         return;
     }
-    public void LoadBagage(int bag){
+    public final void LoadBagage(int bag){
         if(bagage==max_bagage_kg) {
             System.out.println("Количество багажа максимально!");
             return;
@@ -63,9 +63,55 @@ public class Autobus extends Car_Driver {
         return bagage;
     }
 
+    public void setPeople_max(int people_max) {
+        this.people_max = people_max;
+    }
+
+    public void setMax_bagage_kg(int max_bagage_kg) {
+        this.max_bagage_kg = max_bagage_kg;
+    }
+
+    public void setPeople(int people) {
+        this.people = people;
+    }
+
+    public void setBagage(int bagage) {
+        this.bagage = bagage;
+    }
+
     @Override
-    public void info() {
+    public final void info() {
         super.info();
         System.out.println(people_max+" "+max_bagage_kg);
+    }
+
+    @Override
+    public final void MoveBack() {
+        super.MoveBack();
+    }
+
+    @Override
+    public final void MoveForward() {
+        super.MoveForward();
+    }
+
+    @Override
+    public final void MoveLeft() {
+        super.MoveLeft();
+    }
+
+    @Override
+    public final void MoveRight() {
+        super.MoveRight();
+    }
+
+    @Override
+    public final void beep() {
+        super.beep();
+    }
+
+    @Override
+    public final boolean equals(Car car) {
+        return super.equals(car);
     }
 }

@@ -15,17 +15,26 @@ public class SportCar extends Car_Driver {
     }
 
     @Override
-    public void MoveForward(){
+    public final void MoveForward(){
         System.out.println("вввввввВВВИИИууууууууууу...");
     }
 
+    public void setHorsepower(int horsepower) {
+        this.horsepower = horsepower;
+    }
+
+    public void setHundredInSec(float hundredInSec) {
+        this.hundredInSec = hundredInSec;
+    }
+
+
     @Override
-    public void MoveBack(){
+    public final void MoveBack(){
         System.out.println("Never move back...");
     }
 
     @Override
-    public void info() {
+    public final void info() {
         super.info();
         System.out.println(horsepower+" "+hundredInSec+" ");
     }
@@ -36,5 +45,20 @@ public class SportCar extends Car_Driver {
 
     public float getHundredInSec() {
         return hundredInSec;
+    }
+
+    @Override
+    public final void MoveLeft() {
+        super.MoveLeft();
+    }
+
+    @Override
+    public final void MoveRight() {
+        super.MoveRight();
+    }
+
+    @Override
+    public final void beep() {
+        super.beep();
     }
 }
